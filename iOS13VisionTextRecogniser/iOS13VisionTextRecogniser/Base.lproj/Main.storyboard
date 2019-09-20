@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS13VisionTextRecogniser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWT-BW-XIa">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7Rz-yR-52n"/>
+                                    <constraint firstAttribute="width" constant="200" id="bo1-Bv-GiE"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LQ1-cd-sWI">
+                                <rect key="frame" x="87" y="178" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="LhQ-am-INY"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfX-dY-F5q">
+                                <rect key="frame" x="164.5" y="588" width="85" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="btnTakePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7O-fj-k6Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AWT-BW-XIa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IOK-f1-ITD"/>
+                            <constraint firstItem="LQ1-cd-sWI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="J7b-Jq-yKP"/>
+                            <constraint firstItem="AWT-BW-XIa" firstAttribute="top" secondItem="LQ1-cd-sWI" secondAttribute="bottom" constant="47" id="WhT-QA-R1s"/>
+                            <constraint firstItem="qfX-dY-F5q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ap3-8D-tJi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LQ1-cd-sWI" secondAttribute="trailing" constant="87" id="kdz-2H-qlu"/>
+                            <constraint firstItem="qfX-dY-F5q" firstAttribute="top" secondItem="AWT-BW-XIa" secondAttribute="bottom" constant="35" id="lhe-53-Cu1"/>
+                            <constraint firstItem="LQ1-cd-sWI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pWs-2M-9au"/>
+                            <constraint firstItem="AWT-BW-XIa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yH5-6s-YjD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="AWT-BW-XIa" id="YdS-Zh-Bxq"/>
+                        <outlet property="textView" destination="LQ1-cd-sWI" id="gzh-iG-3SQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+</document>
