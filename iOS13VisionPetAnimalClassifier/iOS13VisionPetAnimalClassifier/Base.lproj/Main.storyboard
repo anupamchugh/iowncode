@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5JC-Xt-xyI">
+            <objects>
+                <viewController id="ErW-jr-Ppi" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zl5-4k-94i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-yH-8gt">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Lah-YJ-hig"/>
+                                    <constraint firstAttribute="width" constant="200" id="h7H-Qt-Mpi"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pa7-tO-LmQ">
+                                <rect key="frame" x="87" y="178" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7Hi-HG-ZSc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qm-pe-3x7">
+                                <rect key="frame" x="164.5" y="588" width="85" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="btnTakePicture:" destination="ErW-jr-Ppi" eventType="touchUpInside" id="DGK-40-T9G"/>
+                                    <action selector="takePicture:" destination="ErW-jr-Ppi" eventType="touchUpInside" id="2VQ-lt-vvL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WJ8-yH-8gt" firstAttribute="centerY" secondItem="qlI-9f-5Oc" secondAttribute="centerY" id="DgV-rB-5NB"/>
+                            <constraint firstItem="WJ8-yH-8gt" firstAttribute="centerX" secondItem="qlI-9f-5Oc" secondAttribute="centerX" id="OPv-gi-4Zt"/>
+                            <constraint firstItem="WJ8-yH-8gt" firstAttribute="top" secondItem="Pa7-tO-LmQ" secondAttribute="bottom" constant="47" id="cz3-aP-AWK"/>
+                            <constraint firstItem="3qm-pe-3x7" firstAttribute="centerX" secondItem="qlI-9f-5Oc" secondAttribute="centerX" id="i5j-7A-wDS"/>
+                            <constraint firstItem="Pa7-tO-LmQ" firstAttribute="centerX" secondItem="qlI-9f-5Oc" secondAttribute="centerX" id="oOH-DI-uRb"/>
+                            <constraint firstItem="Pa7-tO-LmQ" firstAttribute="leading" secondItem="qlI-9f-5Oc" secondAttribute="leading" constant="87" id="pwA-cx-ZK7"/>
+                            <constraint firstItem="qlI-9f-5Oc" firstAttribute="trailing" secondItem="Pa7-tO-LmQ" secondAttribute="trailing" constant="87" id="qTz-t1-Zok"/>
+                            <constraint firstItem="3qm-pe-3x7" firstAttribute="top" secondItem="WJ8-yH-8gt" secondAttribute="bottom" constant="35" id="yZd-4g-eWG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qlI-9f-5Oc"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WJ8-yH-8gt" id="Lqj-aQ-2Pl"/>
+                        <outlet property="textView" destination="Pa7-tO-LmQ" id="4FZ-p2-eYF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPF-Lv-pJw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+</document>
