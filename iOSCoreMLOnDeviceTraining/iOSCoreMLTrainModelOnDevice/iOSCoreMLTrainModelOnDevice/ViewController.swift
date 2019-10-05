@@ -24,7 +24,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var btnToggleClassLabel: UIButton!
     private var updatableModel : MLModel?
     
-    
     @IBOutlet weak var imageView: UIImageView!
     var imageLabelDictionary : [UIImage:String] = [:]
     
@@ -38,133 +37,44 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     var imageConstraint: MLImageConstraint!
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         do{
         
-        let fileManager = FileManager.default
-        
-        let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
-
-        let fileURL = documentDirectory.appendingPathComponent("CatDog.mlmodelc")
-        if let model = loadModel(url: fileURL){
-            print("updatable \(model.modelDescription.isUpdatable)")
-            print("model description is \(model.description)")
-            updatableModel = model
-        }
-        else{
-            if let modelURL = Bundle.main.url(forResource: "CatDogUpdatable", withExtension: "mlmodelc")
-            {
-                if let model = loadModel(url: modelURL){
-                    updatableModel = model
+            let fileManager = FileManager.default
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
+            let fileURL = documentDirectory.appendingPathComponent("CatDog.mlmodelc")
+            if let model = loadModel(url: fileURL){
+                updatableModel = model
+            }
+            else{
+                if let modelURL = Bundle.main.url(forResource: "CatDogUpdatable", withExtension: "mlmodelc"){
+                    if let model = loadModel(url: modelURL){
+                        updatableModel = model
+                    }
                 }
             }
-        }
 
-        if let updatableModel = updatableModel{
-            imageConstraint = self.getImageConstraint(model: updatableModel)
-        }
+            if let updatableModel = updatableModel{
+                imageConstraint = self.getImageConstraint(model: updatableModel)
+            }
     
-        }catch(let error)
-        {
+        }catch(let error){
             print("initial error is \(error.localizedDescription)")
         }
         
         btnToggleClassLabel.alpha = 0
-
     }
     
-    @IBAction func startTraining(_ sender: Any) {
-            
-        let modelConfig = MLModelConfiguration()
-        modelConfig.computeUnits = .cpuAndGPU
-        do {
-            let fileManager = FileManager.default
-            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
-            
-            var modelURL = CatDogUpdatable.urlOfModelInThisBundle
-            
-            let pathOfFile = documentDirectory.appendingPathComponent("CatDog.mlmodelc")
-            
-            if fileManager.fileExists(atPath: pathOfFile.path){
-                modelURL = pathOfFile
-            }
-            
-            
-            let updateTask = try MLUpdateTask(forModelAt: modelURL, trainingData: batchProvider(), configuration: modelConfig,
-                             progressHandlers: MLUpdateProgressHandlers(forEvents: [.trainingBegin,.epochEnd],
-                              progressHandler: { (contextProgress) in
-                                print(contextProgress.event)
-                                // you can check the progress here, after each epoch
-                                
-                             }) { (finalContext) in
-                                
-                                if finalContext.task.error?.localizedDescription == nil
-                                {
-                                    let fileManager = FileManager.default
-                                    do {
+    //MARK:- Get MLImageConstraints
 
-                                        let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
-                                        let fileURL = documentDirectory.appendingPathComponent("CatDog.mlmodelc")
-                                        try finalContext.model.write(to: fileURL)
-                                        
-                                        self.updatableModel = self.loadModel(url: fileURL)
-                                        
-                                        DispatchQueue.main.async {
-                                            self.btnTrainImages.alpha = 0
-                                            self.imageLabelDictionary = [:]
-                                            self.retrainImageCount = 0
-                                        }
-                                        
-
-                                    } catch(let error) {
-                                        print("error is \(error.localizedDescription)")
-                                    }
-
-                                }
-                                
-                                
-            })
-            updateTask.resume()
-            
-        } catch {
-            print("Error while upgrading \(error.localizedDescription)")
-        }
-        
-        
-    }
-    
     func getImageConstraint(model: MLModel) -> MLImageConstraint {
       return model.modelDescription.inputDescriptionsByName["image"]!.imageConstraint!
     }
     
-    
-    @IBAction func btnAddToTraining(_ sender: UIButton) {
-        btnToggleClassLabel.alpha = 0
-        
-        if btnTrainImages.alpha == 0{
-            btnTrainImages.alpha = 1
-        }
-        
-        retrainImageCount = retrainImageCount + 1
-        
-        trainingImagesCount.text = "\(retrainImageCount)"
-        
-        if let image = imageView.image{
-            
-            var label = "Dog"
-            if sender.tag == 0{
-                label = "Cat"
-            }
-            imageLabelDictionary[image] = label
-        }
-        
-        
-    }
+    //MARK:- Load Model From URL
     
     private func loadModel(url: URL) -> MLModel? {
       do {
@@ -178,31 +88,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     
-    private func batchProvider() -> MLArrayBatchProvider
-    {
-
-        var batchInputs: [MLFeatureProvider] = []
-        let imageOptions: [MLFeatureValue.ImageOption: Any] = [
-          .cropAndScale: VNImageCropAndScaleOption.scaleFill.rawValue
-        ]
-        for (image,label) in imageLabelDictionary {
-            
-            do{
-                let featureValue = try MLFeatureValue(cgImage: image.cgImage!, constraint: imageConstraint, options: imageOptions)
-              
-                if let pixelBuffer = featureValue.imageBufferValue{
-                    let x = CatDogUpdatableTrainingInput(image: pixelBuffer, classLabel: label)
-                    batchInputs.append(x)
-                }
-            }
-            catch(let error){
-                print("error description is \(error.localizedDescription)")
-            }
-        }
-     return MLArrayBatchProvider(array: batchInputs)
-    }
-    
-    
     @IBAction func takePhotoClicked(_ sender: Any) {
     
         let imagePicker = UIImagePickerController()
@@ -211,35 +96,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func predict(image: UIImage) -> Animal? {
-
-    
-        do{
-        
-            let imageOptions: [MLFeatureValue.ImageOption: Any] = [
-                .cropAndScale: VNImageCropAndScaleOption.scaleFill.rawValue
-            ]
-            
-            let featureValue = try MLFeatureValue(cgImage: image.cgImage!, constraint: imageConstraint, options: imageOptions)
-            let featureProviderDict = try MLDictionaryFeatureProvider(dictionary: ["image" : featureValue])
-            let prediction = try updatableModel?.prediction(from: featureProviderDict)
-            let value = prediction?.featureValue(for: "classLabel")?.stringValue
-            if value == "Dog"{
-                return .dog
-            }
-            else{
-                return .cat
-            }
-        }catch(let error){
-            print("error is \(error.localizedDescription)")
-        }
-        return nil
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-
-
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
@@ -267,5 +123,137 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK:- Run Prediction
+    
+    func predict(image: UIImage) -> Animal? {
+        
+        do{
+        
+            let imageOptions: [MLFeatureValue.ImageOption: Any] = [
+                .cropAndScale: VNImageCropAndScaleOption.scaleFill.rawValue
+            ]
+            let featureValue = try MLFeatureValue(cgImage: image.cgImage!, constraint: imageConstraint, options: imageOptions)
+            let featureProviderDict = try MLDictionaryFeatureProvider(dictionary: ["image" : featureValue])
+            let prediction = try updatableModel?.prediction(from: featureProviderDict)
+            let value = prediction?.featureValue(for: "classLabel")?.stringValue
+            if value == "Dog"{
+                return .dog
+            }
+            else{
+                return .cat
+            }
+        }catch(let error){
+            print("error is \(error.localizedDescription)")
+        }
+        return nil
+    }
+    
+    //MARK:- Image Label Dictionary for training
+    
+    @IBAction func btnAddToTraining(_ sender: UIButton) {
+        btnToggleClassLabel.alpha = 0
+        
+        if btnTrainImages.alpha == 0{
+            btnTrainImages.alpha = 1
+        }
+        retrainImageCount = retrainImageCount + 1
+        trainingImagesCount.text = "\(retrainImageCount)"
+        
+        if let image = imageView.image{
+            var label = "Dog"
+            if sender.tag == 0{
+                label = "Cat"
+            }
+            imageLabelDictionary[image] = label
+        }
+    }
+    
+    //MARK:- MLArrayBatchProvider
+    
+    private func batchProvider() -> MLArrayBatchProvider
+    {
+
+        var batchInputs: [MLFeatureProvider] = []
+        let imageOptions: [MLFeatureValue.ImageOption: Any] = [
+          .cropAndScale: VNImageCropAndScaleOption.scaleFill.rawValue
+        ]
+        for (image,label) in imageLabelDictionary {
+            
+            do{
+                let featureValue = try MLFeatureValue(cgImage: image.cgImage!, constraint: imageConstraint, options: imageOptions)
+              
+                if let pixelBuffer = featureValue.imageBufferValue{
+                    let x = CatDogUpdatableTrainingInput(image: pixelBuffer, classLabel: label)
+                    batchInputs.append(x)
+                }
+            }
+            catch(let error){
+                print("error description is \(error.localizedDescription)")
+            }
+        }
+     return MLArrayBatchProvider(array: batchInputs)
+    }
+
+    
+    //MARK:- Training the Model Using MLUpdateTask
+    
+    @IBAction func startTraining(_ sender: Any) {
+            
+        let modelConfig = MLModelConfiguration()
+        modelConfig.computeUnits = .cpuAndGPU
+        do {
+            let fileManager = FileManager.default
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
+            
+            var modelURL = CatDogUpdatable.urlOfModelInThisBundle
+            let pathOfFile = documentDirectory.appendingPathComponent("CatDog.mlmodelc")
+            
+            if fileManager.fileExists(atPath: pathOfFile.path){
+                modelURL = pathOfFile
+            }
+                        
+            let updateTask = try MLUpdateTask(forModelAt: modelURL, trainingData: batchProvider(), configuration: modelConfig,
+                             progressHandlers: MLUpdateProgressHandlers(forEvents: [.trainingBegin,.epochEnd],
+                              progressHandler: { (contextProgress) in
+                                print(contextProgress.event)
+                                // you can check the progress here, after each epoch
+                                
+                             }) { (finalContext) in
+                                
+                                if finalContext.task.error?.localizedDescription == nil{
+                                    let fileManager = FileManager.default
+                                    do {
+
+                                        let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
+                                        let fileURL = documentDirectory.appendingPathComponent("CatDog.mlmodelc")
+                                        try finalContext.model.write(to: fileURL)
+                                        
+                                        self.updatableModel = self.loadModel(url: fileURL)
+                                        
+                                        DispatchQueue.main.async {
+                                            self.btnTrainImages.alpha = 0
+                                            self.imageLabelDictionary = [:]
+                                            self.retrainImageCount = 0
+                                        }
+
+                                    } catch(let error) {
+                                        print("error is \(error.localizedDescription)")
+                                    }
+                                }
+                                
+                                
+            })
+            updateTask.resume()
+            
+        } catch {
+            print("Error while upgrading \(error.localizedDescription)")
+        }
+    }
 }
+
 
