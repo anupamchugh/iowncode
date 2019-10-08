@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Cl-8m-ZDr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="E6h-g1-xkP">
+            <objects>
+                <viewController id="2Cl-8m-ZDr" customClass="ViewController" customModule="iOSCoreMLTrainModelOnDevice" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Rb-AO-oaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYm-Q5-A8P">
+                                <rect key="frame" x="169" y="433" width="76" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhotoClicked:" destination="2Cl-8m-ZDr" eventType="touchUpInside" id="U9c-hA-yFE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMb-1w-5nm">
+                                <rect key="frame" x="20" y="163" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="i1b-6e-Kue"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXN-hr-5B1">
+                                <rect key="frame" x="207" y="44" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QSf-sb-W0L">
+                                <rect key="frame" x="20" y="471.5" width="374" height="30"/>
+                                <connections>
+                                    <action selector="btnAddToTraining:" destination="2Cl-8m-ZDr" eventType="touchUpInside" id="jOn-vH-1y1"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kt4-ZV-oqu">
+                                <rect key="frame" x="20" y="531.5" width="374" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5i-Fa-g9H">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-2L-jbC">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="50"/>
+                                        <state key="normal" title="Training Images"/>
+                                        <connections>
+                                            <action selector="startTraining:" destination="2Cl-8m-ZDr" eventType="touchUpInside" id="w5l-7Y-5UQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tYm-Q5-A8P" firstAttribute="centerY" secondItem="6Rb-AO-oaI" secondAttribute="centerY" id="8Dc-Sp-FHR"/>
+                            <constraint firstItem="QSf-sb-W0L" firstAttribute="trailing" secondItem="vMb-1w-5nm" secondAttribute="trailing" id="JVO-a5-TZl"/>
+                            <constraint firstItem="Kt4-ZV-oqu" firstAttribute="top" secondItem="QSf-sb-W0L" secondAttribute="bottom" constant="30" id="LSB-Ju-3Zu"/>
+                            <constraint firstItem="QSf-sb-W0L" firstAttribute="leading" secondItem="vMb-1w-5nm" secondAttribute="leading" id="OYe-3c-JKn"/>
+                            <constraint firstItem="QSf-sb-W0L" firstAttribute="top" secondItem="tYm-Q5-A8P" secondAttribute="bottom" constant="8.5" id="VWr-BO-wSB"/>
+                            <constraint firstItem="Kt4-ZV-oqu" firstAttribute="leading" secondItem="mpY-RI-huo" secondAttribute="leading" constant="20" id="fws-br-DsR"/>
+                            <constraint firstItem="MXN-hr-5B1" firstAttribute="top" secondItem="mpY-RI-huo" secondAttribute="top" id="hNT-PV-OTt"/>
+                            <constraint firstItem="MXN-hr-5B1" firstAttribute="centerX" secondItem="mpY-RI-huo" secondAttribute="centerX" id="jIM-dC-HhU"/>
+                            <constraint firstItem="mpY-RI-huo" firstAttribute="trailing" secondItem="vMb-1w-5nm" secondAttribute="trailing" constant="20" id="kDb-uG-TKA"/>
+                            <constraint firstItem="tYm-Q5-A8P" firstAttribute="top" secondItem="vMb-1w-5nm" secondAttribute="bottom" constant="20" id="lQ1-HH-4XU" userLabel="Take Photo.top = Image View.bottom + 20"/>
+                            <constraint firstItem="tYm-Q5-A8P" firstAttribute="centerX" secondItem="6Rb-AO-oaI" secondAttribute="centerX" id="p9r-UW-DOd"/>
+                            <constraint firstItem="vMb-1w-5nm" firstAttribute="leading" secondItem="mpY-RI-huo" secondAttribute="leading" constant="20" id="uG9-YV-Fhz"/>
+                            <constraint firstItem="mpY-RI-huo" firstAttribute="trailing" secondItem="Kt4-ZV-oqu" secondAttribute="trailing" constant="20" id="ySc-K2-28a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mpY-RI-huo"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnToggleClassLabel" destination="QSf-sb-W0L" id="Dc6-nG-nWz"/>
+                        <outlet property="btnTrainImages" destination="l6s-2L-jbC" id="FN7-ba-AE6"/>
+                        <outlet property="imageView" destination="vMb-1w-5nm" id="v1c-qm-Gjf"/>
+                        <outlet property="predicatedClassLabel" destination="MXN-hr-5B1" id="9oz-K1-wAM"/>
+                        <outlet property="trainingImagesCount" destination="H5i-Fa-g9H" id="PGv-bU-UhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSv-Dd-sfc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>
