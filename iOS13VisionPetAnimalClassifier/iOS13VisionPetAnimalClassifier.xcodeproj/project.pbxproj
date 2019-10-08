@@ -24,6 +24,7 @@
 		1EB03D36233F66DE00DFEF69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EB03D39233F66DE00DFEF69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EB03D3B233F66DE00DFEF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF54EDF234CA77000327FDE /* iOS13VisionPetAnimalClassifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS13VisionPetAnimalClassifier.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		1EB03D2C233F66D600DFEF69 /* iOS13VisionPetAnimalClassifier */ = {
 			isa = PBXGroup;
 			children = (
+				1EF54EDF234CA77000327FDE /* iOS13VisionPetAnimalClassifier.entitlements */,
 				1EB03D2D233F66D600DFEF69 /* AppDelegate.swift */,
 				1EB03D2F233F66D600DFEF69 /* SceneDelegate.swift */,
 				1EB03D31233F66D600DFEF69 /* ViewController.swift */,
@@ -284,7 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS13VisionPetAnimalClassifier/iOS13VisionPetAnimalClassifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = M6P56H6G97;
 				INFOPLIST_FILE = iOS13VisionPetAnimalClassifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +297,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iowncode.iOS13VisionPetAnimalClassifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +307,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS13VisionPetAnimalClassifier/iOS13VisionPetAnimalClassifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = M6P56H6G97;
 				INFOPLIST_FILE = iOS13VisionPetAnimalClassifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +318,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iowncode.iOS13VisionPetAnimalClassifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
