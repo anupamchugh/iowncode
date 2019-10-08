@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ErW-jr-Ppi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="5JC-Xt-xyI">
             <objects>
-                <viewController id="ErW-jr-Ppi" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="ErW-jr-Ppi" customClass="ViewController" customModule="iOS13VisionPetAnimalClassifier" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zl5-4k-94i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,6 @@
                                 <rect key="frame" x="164.5" y="588" width="85" height="30"/>
                                 <state key="normal" title="Take Picture"/>
                                 <connections>
-                                    <action selector="btnTakePicture:" destination="ErW-jr-Ppi" eventType="touchUpInside" id="DGK-40-T9G"/>
                                     <action selector="takePicture:" destination="ErW-jr-Ppi" eventType="touchUpInside" id="2VQ-lt-vvL"/>
                                 </connections>
                             </button>
