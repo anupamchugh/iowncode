@@ -41,35 +41,38 @@ class ViewController: UIViewController {
             
         }
     }
-
-    @objc func detectImage() {
+    
+    func preprocessImage() -> UIImage
+    {
         var image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 10.0)
         if let newImage = UIImage(color: .black, size: CGSize(width: view.frame.width, height: view.frame.height)){
 
             if let overlayedImage = newImage.image(byDrawingImage: image, inRect: CGRect(x: view.center.x, y: view.center.y, width: view.frame.width, height: view.frame.height)){
-            
                 image = overlayedImage
             }
         }
         
-        processImage(image: image)
+        return image
+    }
+
+    @objc func detectImage() {
+        
+        let image = preprocessImage()
+        predictImage(image: image)
         
     }
     
     private let trainedImageSize = CGSize(width: 28, height: 28)
 
-    func processImage(image: UIImage){
+    func predictImage(image: UIImage){
         if let resizedImage = image.resize(newSize: trainedImageSize), let pixelBuffer = resizedImage.toCVPixelBuffer(){
 
         guard let result = try? MNIST().prediction(image: pixelBuffer) else {
             print("error in image...")
             return
         }
-            
-            
             navigationBar.topItem?.leftBarButtonItem?.title = "Predicted: \(result.classLabel)"
             print("result is \(result.classLabel)")
-
         }
     }
     
@@ -134,7 +137,6 @@ extension UIImage {
     func toCVPixelBuffer() -> CVPixelBuffer? {
        var pixelBuffer: CVPixelBuffer? = nil
 
-        
         let attr = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue,
         kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
         
@@ -158,4 +160,3 @@ extension UIImage {
     
     
 }
-
