@@ -112,7 +112,7 @@ class ViewController: UIViewController {
             UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        
+        addActionSheetForiPad(actionSheet: alert)
         present(alert,
                     animated: true,
                     completion: nil)
@@ -153,4 +153,14 @@ extension UIAlertController {
         let vc = PreviewVC(image: image)
         setValue(vc, forKey: "contentViewController")
     }
+}
+
+extension UIViewController {
+  public func addActionSheetForiPad(actionSheet: UIAlertController) {
+    if let popoverPresentationController = actionSheet.popoverPresentationController {
+      popoverPresentationController.sourceView = self.view
+      popoverPresentationController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+      popoverPresentationController.permittedArrowDirections = []
+    }
+  }
 }
