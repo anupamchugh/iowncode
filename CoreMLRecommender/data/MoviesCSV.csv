@@ -1,0 +1,19 @@
+user_id,movie_id,rating_id
+A,Inception,4
+A,Once Upon A Time In Hollywood,2
+A,Titanic,3
+C,Once Upon A Time In Hollywood,3
+C,Shawshank Redemption,4.5
+B,Inception,4.6
+A,Shawshank Redemption,5
+B,Titanic,3
+B,Room,1
+D,Once Upon A Time In Hollywood,3
+D,Room,0.5
+D,Shawshank Redemption,4.5
+B,Jack And Jill,1
+C,Jack And Jill,1.5
+D,Jack And Jill,1
+A,Home Alone,3.5
+C,Home Alone,2.5
+D,Home Alone,3
