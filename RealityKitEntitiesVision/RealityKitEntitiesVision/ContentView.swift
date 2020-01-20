@@ -185,17 +185,17 @@ extension ARView{
             return
         }
         
-        rayCastingMethod()
+        rayCastingMethod(point: touchInView)
         let entities = self.entities(at: touchInView)
         
     }
     
-    func rayCastingMethod() {
+    func rayCastingMethod(point: CGPoint) {
         
         
         guard let coordinator = self.session.delegate as? ARViewCoordinator else{ return }
 
-        guard let raycastQuery = self.makeRaycastQuery(from: self.center,
+        guard let raycastQuery = self.makeRaycastQuery(from: point,
                                                        allowing: .existingPlaneInfinite,
                                                        alignment: .horizontal) else {
                                                         
