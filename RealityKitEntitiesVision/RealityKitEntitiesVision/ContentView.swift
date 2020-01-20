@@ -178,7 +178,6 @@ extension ARView{
         self.addGestureRecognizer(tap)
     }
     
-    /// Handle taps on the screen, currently exclusively used for flipping cards
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         
         guard let touchInView = sender?.location(in: self) else {
