@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E03B14A23DB7CC90081F923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B14923DB7CC90081F923 /* AppDelegate.swift */; };
+		1E03B14C23DB7CC90081F923 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B14B23DB7CC90081F923 /* SceneDelegate.swift */; };
+		1E03B14E23DB7CC90081F923 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B14D23DB7CC90081F923 /* ViewController.swift */; };
+		1E03B15123DB7CC90081F923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E03B14F23DB7CC90081F923 /* Main.storyboard */; };
+		1E03B15323DB7CCF0081F923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E03B15223DB7CCF0081F923 /* Assets.xcassets */; };
+		1E03B15623DB7CCF0081F923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E03B15423DB7CCF0081F923 /* LaunchScreen.storyboard */; };
+		1E03B15E23DB7DF20081F923 /* TinderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B15D23DB7DF20081F923 /* TinderCardView.swift */; };
+		1E03B16023DB7F690081F923 /* CardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B15F23DB7F690081F923 /* CardProtocols.swift */; };
+		1E03B16223DB7FF20081F923 /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B16123DB7FF20081F923 /* StackContainerView.swift */; };
+		1E03B16423DB81120081F923 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B16323DB81120081F923 /* DataModel.swift */; };
+		1E03B16623DC58B00081F923 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03B16523DC58B00081F923 /* CameraView.swift */; };
+		AC16C0DFBAD9C31BEA360085 /* Pods_BlinkPoseAndSwipeiOSMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C55B0282D96DE85D79BDE2C /* Pods_BlinkPoseAndSwipeiOSMLKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		122D4E66A79C74C8387E84CA /* Pods-BlinkPoseAndSwipeiOSMLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkPoseAndSwipeiOSMLKit.debug.xcconfig"; path = "Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit.debug.xcconfig"; sourceTree = "<group>"; };
+		1E03B14623DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinkPoseAndSwipeiOSMLKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E03B14923DB7CC90081F923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E03B14B23DB7CC90081F923 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E03B14D23DB7CC90081F923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E03B15023DB7CC90081F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E03B15223DB7CCF0081F923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E03B15523DB7CCF0081F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E03B15723DB7CCF0081F923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E03B15D23DB7DF20081F923 /* TinderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCardView.swift; sourceTree = "<group>"; };
+		1E03B15F23DB7F690081F923 /* CardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProtocols.swift; sourceTree = "<group>"; };
+		1E03B16123DB7FF20081F923 /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
+		1E03B16323DB81120081F923 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		1E03B16523DC58B00081F923 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		7C55B0282D96DE85D79BDE2C /* Pods_BlinkPoseAndSwipeiOSMLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlinkPoseAndSwipeiOSMLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71ED78AF57B70971F4C952F /* Pods-BlinkPoseAndSwipeiOSMLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkPoseAndSwipeiOSMLKit.release.xcconfig"; path = "Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E03B14323DB7CC90081F923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC16C0DFBAD9C31BEA360085 /* Pods_BlinkPoseAndSwipeiOSMLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E03B13D23DB7CC90081F923 = {
+			isa = PBXGroup;
+			children = (
+				1E03B14823DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit */,
+				1E03B14723DB7CC90081F923 /* Products */,
+				1E0CE522DE00A889EE2D076A /* Pods */,
+				49AED5CF2D6CF5492C3B37CB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E03B14723DB7CC90081F923 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E03B14623DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E03B14823DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit */ = {
+			isa = PBXGroup;
+			children = (
+				1E03B14923DB7CC90081F923 /* AppDelegate.swift */,
+				1E03B14B23DB7CC90081F923 /* SceneDelegate.swift */,
+				1E03B14D23DB7CC90081F923 /* ViewController.swift */,
+				1E03B14F23DB7CC90081F923 /* Main.storyboard */,
+				1E03B15223DB7CCF0081F923 /* Assets.xcassets */,
+				1E03B15423DB7CCF0081F923 /* LaunchScreen.storyboard */,
+				1E03B15723DB7CCF0081F923 /* Info.plist */,
+				1E03B15D23DB7DF20081F923 /* TinderCardView.swift */,
+				1E03B15F23DB7F690081F923 /* CardProtocols.swift */,
+				1E03B16123DB7FF20081F923 /* StackContainerView.swift */,
+				1E03B16323DB81120081F923 /* DataModel.swift */,
+				1E03B16523DC58B00081F923 /* CameraView.swift */,
+			);
+			path = BlinkPoseAndSwipeiOSMLKit;
+			sourceTree = "<group>";
+		};
+		1E0CE522DE00A889EE2D076A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				122D4E66A79C74C8387E84CA /* Pods-BlinkPoseAndSwipeiOSMLKit.debug.xcconfig */,
+				E71ED78AF57B70971F4C952F /* Pods-BlinkPoseAndSwipeiOSMLKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		49AED5CF2D6CF5492C3B37CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C55B0282D96DE85D79BDE2C /* Pods_BlinkPoseAndSwipeiOSMLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E03B14523DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E03B15A23DB7CCF0081F923 /* Build configuration list for PBXNativeTarget "BlinkPoseAndSwipeiOSMLKit" */;
+			buildPhases = (
+				99AA3F801153ABC772E1F066 /* [CP] Check Pods Manifest.lock */,
+				1E03B14223DB7CC90081F923 /* Sources */,
+				1E03B14323DB7CC90081F923 /* Frameworks */,
+				1E03B14423DB7CC90081F923 /* Resources */,
+				92ADE622418B7358C5AFE1D1 /* [CP] Embed Pods Frameworks */,
+				03AE57A160FB2BCACE54DA8F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlinkPoseAndSwipeiOSMLKit;
+			productName = BlinkPoseAndSwipeiOSMLKit;
+			productReference = 1E03B14623DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E03B13E23DB7CC90081F923 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = iowncode;
+				TargetAttributes = {
+					1E03B14523DB7CC90081F923 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 1E03B14123DB7CC90081F923 /* Build configuration list for PBXProject "BlinkPoseAndSwipeiOSMLKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E03B13D23DB7CC90081F923;
+			productRefGroup = 1E03B14723DB7CC90081F923 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E03B14523DB7CC90081F923 /* BlinkPoseAndSwipeiOSMLKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E03B14423DB7CC90081F923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E03B15623DB7CCF0081F923 /* LaunchScreen.storyboard in Resources */,
+				1E03B15323DB7CCF0081F923 /* Assets.xcassets in Resources */,
+				1E03B15123DB7CC90081F923 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03AE57A160FB2BCACE54DA8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92ADE622418B7358C5AFE1D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlinkPoseAndSwipeiOSMLKit/Pods-BlinkPoseAndSwipeiOSMLKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AA3F801153ABC772E1F066 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlinkPoseAndSwipeiOSMLKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E03B14223DB7CC90081F923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E03B16423DB81120081F923 /* DataModel.swift in Sources */,
+				1E03B14E23DB7CC90081F923 /* ViewController.swift in Sources */,
+				1E03B14A23DB7CC90081F923 /* AppDelegate.swift in Sources */,
+				1E03B16023DB7F690081F923 /* CardProtocols.swift in Sources */,
+				1E03B15E23DB7DF20081F923 /* TinderCardView.swift in Sources */,
+				1E03B14C23DB7CC90081F923 /* SceneDelegate.swift in Sources */,
+				1E03B16223DB7FF20081F923 /* StackContainerView.swift in Sources */,
+				1E03B16623DC58B00081F923 /* CameraView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E03B14F23DB7CC90081F923 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E03B15023DB7CC90081F923 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E03B15423DB7CCF0081F923 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E03B15523DB7CCF0081F923 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E03B15823DB7CCF0081F923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E03B15923DB7CCF0081F923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E03B15B23DB7CCF0081F923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 122D4E66A79C74C8387E84CA /* Pods-BlinkPoseAndSwipeiOSMLKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6P56H6G97;
+				INFOPLIST_FILE = BlinkPoseAndSwipeiOSMLKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iowncode.BlinkPoseAndSwipeiOSMLKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E03B15C23DB7CCF0081F923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E71ED78AF57B70971F4C952F /* Pods-BlinkPoseAndSwipeiOSMLKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6P56H6G97;
+				INFOPLIST_FILE = BlinkPoseAndSwipeiOSMLKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iowncode.BlinkPoseAndSwipeiOSMLKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E03B14123DB7CC90081F923 /* Build configuration list for PBXProject "BlinkPoseAndSwipeiOSMLKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E03B15823DB7CCF0081F923 /* Debug */,
+				1E03B15923DB7CCF0081F923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E03B15A23DB7CCF0081F923 /* Build configuration list for PBXNativeTarget "BlinkPoseAndSwipeiOSMLKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E03B15B23DB7CCF0081F923 /* Debug */,
+				1E03B15C23DB7CCF0081F923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E03B13E23DB7CC90081F923 /* Project object */;
+}
