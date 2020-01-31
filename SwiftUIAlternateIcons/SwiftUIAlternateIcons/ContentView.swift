@@ -20,21 +20,22 @@ struct ContentView: View {
                     Picker(selection: $iconSettings.currentIndex, label: Text("Icons"))
                     {
                         ForEach(0..<iconSettings.iconNames.count) { index in
-                            //HStack{
+                            HStack{
                                 Text(self.iconSettings.iconNames[index] ?? "Default")
-                                    //Commented due to the NavigationView glitch currently
-                                    //.frame(minWidth : 100, alignment: .leading)
+                                    .frame(minWidth : 100, alignment: .leading)
 
-//                                Image(uiImage: UIImage(named: self.iconSettings.iconNames[index] ?? "Default") ?? UIImage())
-//                                    .frame(height: 50)
-                            //}
+                                Image(uiImage: UIImage(named: self.iconSettings.iconNames[index] ?? "Default") ?? UIImage())
+                                    .renderingMode(.original) //important
+                                    .frame(height: 50)
+                            }
                         }
                     }.onReceive([self.iconSettings.currentIndex].publisher.first()) { (value) in
 
                         let index = self.iconSettings.iconNames.firstIndex(of: UIApplication.shared.alternateIconName) ?? 0
 
                         if index != value{
- UIApplication.shared.setAlternateIconName(self.iconSettings.iconNames[value]){ error in
+ 
+                            UIApplication.shared.setAlternateIconName(self.iconSettings.iconNames[value]){ error in
                                 if let error = error {
                                     print(error.localizedDescription)
                                 } else {
@@ -46,7 +47,6 @@ struct ContentView: View {
                 }
 
             } .navigationBarTitle("AlternateIcons", displayMode: .inline)
-            //.buttonStyle(PlainButtonStyle())
 
         }
     }
