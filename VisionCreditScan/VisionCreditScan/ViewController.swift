@@ -6,6 +6,7 @@
 //  Copyright © 2020 iowncode. All rights reserved.
 //
 
+
 import UIKit
 import AVFoundation
 import Vision
@@ -21,6 +22,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     lazy var item : UINavigationItem = {
         let item = UINavigationItem()
+        
         item.setRightBarButton(UIBarButtonItem(title: "Scan", style: .plain, target: self, action: #selector(doScan(sender:))), animated: false)
         
         return item
@@ -30,12 +32,24 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.setCameraInput()
         self.showCameraFeed()
         self.setCameraOutput()
-        self.captureSession.startRunning()
+        
         self.navigationController?.navigationBar.setItems([item], animated: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        self.videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "camera_frame_processing_queue"))
+        self.captureSession.startRunning()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        self.videoDataOutput.setSampleBufferDelegate(nil, queue: nil)
+        self.captureSession.stopRunning()
     }
     
     func doPerspectiveCorrection(_ observation: VNRectangleObservation, from buffer: CVImageBuffer) {
@@ -57,11 +71,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let context = CIContext()
         let cgImage = context.createCGImage(ciImage, from: ciImage.extent)
         let output = UIImage(cgImage: cgImage!)
-        UIImageWriteToSavedPhotosAlbum(output, nil, nil, nil)
+        //UIImageWriteToSavedPhotosAlbum(output, nil, nil, nil)
         
-//        let secondVC = TextExtractorVC()
-//        secondVC.scannedImage = output
-//        self.present(secondVC, animated: false, completion: nil)
+        let secondVC = TextExtractorVC()
+        secondVC.scannedImage = output
+        self.navigationController?.pushViewController(secondVC, animated: false)
         
     }
     
@@ -109,8 +123,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         self.videoDataOutput.alwaysDiscardsLateVideoFrames = true
         self.videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "camera_frame_processing_queue"))
-        
         self.captureSession.addOutput(self.videoDataOutput)
+        
         guard let connection = self.videoDataOutput.connection(with: AVMediaType.video),
             connection.isVideoOrientationSupported else { return }
         
@@ -180,3 +194,4 @@ extension CGPoint {
                       y: self.y * size.height)
    }
 }
+
