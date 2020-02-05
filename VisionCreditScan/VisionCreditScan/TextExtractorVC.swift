@@ -8,11 +8,9 @@
 
 import UIKit
 import Vision
-//import CoreMotion
 
 class TextExtractorVC: UIViewController {
     
-    //let manager = CMMotionManager()
     let queue = OperationQueue()
     
     let overlay = UIView()
