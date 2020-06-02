@@ -15,12 +15,18 @@ struct Model: Identifiable {
 
 struct ContentView: View {
     
+    var modelData = DataModel(modelData: [Model(title: "Item 1"), Model(title: "Item 2"), Model(title: "Item 3")])
+    
     var body: some View {
         GeometryReader{
         geometry in
         NavigationView{
             
-                CustomScrollView(width: geometry.size.width, height: geometry.size.height)
+            CustomScrollView(width: geometry.size.width, height: geometry.size.height, handlePullToRefresh: {
+                self.modelData.addElement()
+            }) {
+                SwiftUIList(model: self.modelData)
+            }
                     .navigationBarTitle(Text("SwiftUI Pull To Refresh"), displayMode: .inline)
             
             }
@@ -55,13 +61,14 @@ class DataModel: ObservableObject {
 }
 
 
-struct CustomScrollView : UIViewRepresentable {
+struct CustomScrollView<ROOTVIEW>: UIViewRepresentable where ROOTVIEW: View {
     
     var width : CGFloat, height : CGFloat
-    let modelData = DataModel(modelData: [Model(title: "Item 1"), Model(title: "Item 2"), Model(title: "Item 3")])
+    let handlePullToRefresh: () -> Void
+    let rootView: () -> ROOTVIEW
     
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self, model: modelData)
+    func makeCoordinator() -> Coordinator<ROOTVIEW> {
+        Coordinator(self, rootView: rootView, handlePullToRefresh: handlePullToRefresh)
     }
 
     func makeUIView(context: Context) -> UIScrollView {
@@ -71,7 +78,7 @@ struct CustomScrollView : UIViewRepresentable {
             #selector(Coordinator.handleRefreshControl),
                                           for: .valueChanged)
 
-        let childView = UIHostingController(rootView: SwiftUIList(model: modelData))
+        let childView = UIHostingController(rootView: rootView() )
         childView.view.frame = CGRect(x: 0, y: 0, width: width, height: height)
         
         control.addSubview(childView.view)
@@ -80,19 +87,22 @@ struct CustomScrollView : UIViewRepresentable {
 
     func updateUIView(_ uiView: UIScrollView, context: Context) {}
 
-    class Coordinator: NSObject {
+    class Coordinator<ROOTVIEW>: NSObject where ROOTVIEW: View {
         var control: CustomScrollView
-        var model : DataModel
+        var handlePullToRefresh: () -> Void
+        var rootView: () -> ROOTVIEW
 
-        init(_ control: CustomScrollView, model: DataModel) {
+        init(_ control: CustomScrollView, rootView: @escaping () -> ROOTVIEW, handlePullToRefresh: @escaping () -> Void) {
             self.control = control
-            self.model = model
+            self.handlePullToRefresh = handlePullToRefresh
+            self.rootView = rootView
         }
 
         @objc func handleRefreshControl(sender: UIRefreshControl) {
 
             sender.endRefreshing()
-            model.addElement()
+            handlePullToRefresh()
+           
         }
     }
 }
