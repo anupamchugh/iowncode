@@ -19,8 +19,8 @@ struct SearchDemo: View {
                 List {
                     ForEach(self.weeks.filter {
                         self.searchText.isEmpty ? true : $0.lowercased().contains(self.searchText.lowercased())
-                    }, id: \.self) { car in
-                        Text(car)
+                    }, id: \.self) { day in
+                        Text(day)
                     }
                 }.navigationBarTitle(Text("DaysOfAWeek"))
             }
