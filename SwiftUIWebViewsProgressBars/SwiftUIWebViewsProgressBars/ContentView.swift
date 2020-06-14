@@ -1,18 +1,9 @@
-//
-//  ContentView.swift
-//  SwiftUIWebViewsProgressBars
-//
-//  Created by Anupam Chugh on 12/06/20.
-//  Copyright © 2020 iowncode. All rights reserved.
-//
-
 import SwiftUI
 import WebKit
 
 
 class WebViewModel: ObservableObject {
     @Published var progress: Double = 0.0
-    @Published var didFinishLoading: Bool = false
     @Published var link : String
 
     init (progress: Double, link : String) {
@@ -24,9 +15,7 @@ class WebViewModel: ObservableObject {
 struct SwiftUIProgressBar: View {
     
     @Binding var progress: Double
-    @State var isShowing = false
-    
-    
+
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
@@ -36,14 +25,10 @@ struct SwiftUIProgressBar: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
                 Rectangle()
                     .foregroundColor(Color.blue)
-                    .frame(width: self.isShowing ? geometry.size.width * CGFloat((self.progress)) : 0.0,
+                    .frame(width: geometry.size.width * CGFloat((self.progress)),
                            height: geometry.size.height)
                     .animation(.linear(duration: 0.5))
             }
-            .onAppear {
-                self.isShowing = true
-            }
-            
         }
     }
 }
@@ -85,14 +70,9 @@ class Coordinator: NSObject {
         estimatedProgressObserver = self.parent.webView.observe(\.estimatedProgress, options: [.new]) { [weak self] webView, _ in
             print(Float(webView.estimatedProgress))
             guard let weakSelf = self else{return}
-
-            if webView.estimatedProgress == 1.0{
-                weakSelf.viewModel.didFinishLoading = true
-            }
-            else{
-            weakSelf.viewModel.progress = webView.estimatedProgress
-            }
             
+            weakSelf.viewModel.progress = webView.estimatedProgress
+
         }
     }
 
@@ -114,11 +94,10 @@ struct ContentView : View {
                     SwiftUIWebView(viewModel: model)
                 }
 
-                if !model.didFinishLoading {
+                if model.progress >= 0.0 && model.progress < 1.0 {
                 SwiftUIProgressBar(progress: .constant(model.progress))
                     .frame(height: 15.0)
                     .foregroundColor(.accentColor)
-                    
                 }
                 
             }
