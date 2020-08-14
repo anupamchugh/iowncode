@@ -1,7 +1,3 @@
 # iowncode
 
-If these projects helped you reduce your development time, you can buy me a cup of coffee!
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/anupamchugh)
-
-</a>
+I was too lazy to write a Readme for this repository. But I've addressed that in my [iOS 14 Repository](https://github.com/anupamchugh/iOS14-Resources). Check it out! 
