@@ -18,7 +18,7 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 
 
 ## CoreML and CreateML
-* CoreML 3 On Device Training [Part 1: Build Updatable Model](https://medium.com/better-programming/how-to-create-updatable-models-using-core-ml-3-cc7decd517d5?source=friends_link&sk=b34c2f90ec24f355dcad7e0c075e2f5e) [Part 2: Re-train On Device](https://medium.com/better-programming/how-to-train-a-core-ml-model-on-your-device-cccd0bee19d?source=friends_link&sk=efa2297be5c42ca26c0971f4888f73d1) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSCoreMLOnDeviceTraining)
+* CoreML 3 On Device Training [Part 1: Build Updatable Model](https://medium.com/better-programming/how-to-create-updatable-models-using-core-ml-3-cc7decd517d5?source=friends_link&sk=b34c2f90ec24f355dcad7e0c075e2f5e) | [Part 2: Re-train On Device](https://medium.com/better-programming/how-to-train-a-core-ml-model-on-your-device-cccd0bee19d?source=friends_link&sk=efa2297be5c42ca26c0971f4888f73d1) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSCoreMLOnDeviceTraining)
 * [PencilKit Run Core ML Model MNIST](https://medium.com/better-programming/pencilkit-meets-core-ml-aefe3cde6a96?source=friends_link&sk=f3cf758575adb9c6391af3bd18fd65a6) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSPencilKitCoreMLMNIST)
 * [Sound Classifier Using CoreML and CreateML](https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreML3SoundClassifier)
 * [CoreML CreateML Recommender System](https://heartbeat.fritz.ai/build-a-core-ml-recommender-engine-for-ios-using-create-ml-e8a748d01ba3) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLRecommender)
@@ -40,6 +40,29 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 ## RealityKit
 * [Introduction To Entities, Gestures and Raycasting](https://heartbeat.fritz.ai/introduction-to-realitykit-on-ios-entities-gestures-and-ray-casting-8f6633c11877) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitEntitiesVision)
 * [Collisions](https://heartbeat.fritz.ai/realitykit-on-ios-part-2-applying-collision-events-d64b6e10421f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitCollisions)
+
+
+## UIKit and other changes in iOS 13
+* [Compositional Layouts](https://medium.com/better-programming/ios-13-compositional-layouts-in-collectionview-90a574b410b8) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13CompostionalLayouts)
+* [Diffable Datasources](https://medium.com/better-programming/applying-diffable-data-sources-70ce65b368e4) | [Code](https://github.com/anupamchugh/iowncode/tree/master/DiffableDataSources)
+* [ContextMenu and SFSymbols](https://medium.com/better-programming/ios-context-menu-collection-view-a03b032fe330) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13ContextMenu)
+* [Multi Selection on TableView and CollectionView](https://medium.com/better-programming/ios-13-multi-selection-gestures-in-tableview-and-collectionview-619d515eef16) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13TableViewAndCollectionView)
+* [What's New In MapKit](https://medium.com/better-programming/exploring-mapkit-on-ios-13-1a7a1439e3b6?source=friends_link&sk=5e333f42b70e9adff945a73a2ec922a2) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13MapKit)
+* [iOS 13 Location Permissions: CoreLocation](https://medium.com/better-programming/handling-ios-13-location-permissions-5482abc77961) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13CoreLocationChanges)
+* [iOS 13 On-Device Speech Recognition](https://medium.com/better-programming/ios-speech-recognition-on-device-e9a54a4468b5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13OnDeviceSpeechRecognition)
+* [Introduction To PencilKit](https://medium.com/better-programming/an-introduction-to-pencilkit-in-ios-4d40aa62ba5b) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13OnDeviceSpeechRecognition)
+* [PencilKit Meets MapKit](https://medium.com/better-programming/cropping-ios-maps-with-pencilkit-da7f7dd7ec52) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSMapAndPencilKit)
+* [iPadOS MultiWindow Support](https://medium.com/better-programming/implementing-multiple-window-support-in-ipados-5b9a3ceeac6f?source=friends_link&sk=85b7f435bc341eac7ee420bb0a9da366) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iPadOSMultiWindowExample)
+
+</br>
+
+If these projects helped you save development time, you can buy me a cup of coffee!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/anupamchugh)
+
+</a>
+
+
 
 
 
