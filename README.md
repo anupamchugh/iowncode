@@ -12,6 +12,38 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 * [SwiftUI Change App Icon](https://medium.com/better-programming/how-to-change-your-apps-icon-in-swiftui-1f2ff3c44344?source=friends_link&sk=687ac692bb6df5ce97669066d799fa2f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIAlternateIcons)
 * [SwiftUI Contact Search](https://medium.com/better-programming/build-a-swiftui-contacts-search-application-d41b414fe046?source=friends_link&sk=38c67b34ada448c52827f5be1f70ada8) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIContactSearch)
 * [SwiftUI Pull To Refresh Workaround](https://medium.com/better-programming/pull-to-refresh-in-swiftui-6604f54a01d5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIPullToRefresh)
+* [SwiftUI Alamofire](https://medium.com/better-programming/combine-swiftui-with-alamofire-abb4cd4a0aca?source=friends_link&sk=46215390a2df56654ae240d06755a905) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIAlamofire)
+* [SwiftUI COVID-19 Maps Visualisation](https://heartbeat.fritz.ai/coronavirus-visualisation-on-maps-with-swiftui-and-combine-on-ios-c3f6e04c2634) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUICoronaMapTracker)
+* [SwiftUI Combine URLSession Infinite Scrolling](https://medium.com/better-programming/build-an-endless-scrolling-list-with-swiftui-combine-and-urlsession-8a697a8318cb?source=friends_link&sk=d0ed3a0e29bc59b9faf0176e000dbe68) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUICombineURLSession)
+
+
+## CoreML and CreateML
+* CoreML 3 On Device Training [Part 1: Build Updatable Model](https://medium.com/better-programming/how-to-create-updatable-models-using-core-ml-3-cc7decd517d5?source=friends_link&sk=b34c2f90ec24f355dcad7e0c075e2f5e) [Part 2: Re-train On Device](https://medium.com/better-programming/how-to-train-a-core-ml-model-on-your-device-cccd0bee19d?source=friends_link&sk=efa2297be5c42ca26c0971f4888f73d1) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSCoreMLOnDeviceTraining)
+* [PencilKit Run Core ML Model MNIST](https://medium.com/better-programming/pencilkit-meets-core-ml-aefe3cde6a96?source=friends_link&sk=f3cf758575adb9c6391af3bd18fd65a6) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSPencilKitCoreMLMNIST)
+* [Sound Classifier Using CoreML and CreateML](https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreML3SoundClassifier)
+* [CoreML CreateML Recommender System](https://heartbeat.fritz.ai/build-a-core-ml-recommender-engine-for-ios-using-create-ml-e8a748d01ba3) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLRecommender)
+* [CoreML NSFW Classifier Using CreateML](https://medium.com/better-programming/nsfw-image-detector-using-create-ml-core-ml-and-vision-79792d805bab?source=friends_link&sk=6b1007eab8dce2aa5079953409b9e63d) | [Code](https://github.com/anupamchugh/iowncode/tree/master/NSFWCreateMLImageClassifier)
+* [SwiftUI CoreML Emoji Hunter Game](https://heartbeat.fritz.ai/build-a-swiftui-core-ml-emoji-hunt-game-for-ios-eb4465ec4153) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIVisionEmojiHunt)
+
+## Vision Framework
+* [Built-in Animal Classifier](https://medium.com/swlh/ios-vision-cat-vs-dog-image-classifier-in-5-minutes-f9fd6f264762?source=friends_link&sk=2d03ffb703aa0d15415f4690e8d81c3f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionPetAnimalClassifier)
+* [Built-in Text Recognition](https://medium.com/better-programming/ios-vision-text-document-scanner-effc0b7f4635) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionTextRecogniser)
+* [Image Similarity](https://heartbeat.fritz.ai/compute-image-similarity-using-computer-vision-in-ios-75b4dcdd095f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSImageSimilarityUsingVision)
+* [Scanning Credit Card Using Rectangle Detection and Text Recognition](https://heartbeat.fritz.ai/scanning-credit-cards-with-computer-vision-on-ios-c3f4d8912de4) | [Code](https://github.com/anupamchugh/iowncode/tree/master/VisionCreditScan)
+* [Cropping Using Saliency](https://medium.com/better-programming/cropping-areas-of-interest-using-vision-in-ios-e83b5e53440b?source=friends_link&sk=e14d1979ec429468e5a5f63ec44c5a75) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionCroppingSalientFeatures)
+* [Find Best Face Captured In A Live Photo](https://heartbeat.fritz.ai/computer-vision-in-ios-determine-the-best-facial-expression-in-live-photos-452a2eaf6512) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionFaceQualityLivePhoto)
+
+## Natural Language Framework
+* [Classify Movie Reviews Using Sentiment Analysis and also CoreML](https://towardsdatascience.com/classifying-movie-reviews-with-natural-language-framework-12dfe2fc3308) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSNLPRottenTomatoes)
+* [Sentiment Analysis Of Hacker News Feed Using SwiftUI](https://heartbeat.fritz.ai/sentiment-analysis-on-ios-using-swift-natural-language-and-combine-hacker-news-top-stories-d1b8d8f4f798) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIHNSentiments)
+
+## RealityKit
+* [Introduction To Entities, Gestures and Raycasting](https://heartbeat.fritz.ai/introduction-to-realitykit-on-ios-entities-gestures-and-ray-casting-8f6633c11877) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitEntitiesVision)
+* [Collisions](https://heartbeat.fritz.ai/realitykit-on-ios-part-2-applying-collision-events-d64b6e10421f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitCollisions)
+
+
+
+
 
 
 
