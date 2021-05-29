@@ -24,6 +24,7 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 * [CoreML CreateML Recommender System](https://heartbeat.fritz.ai/build-a-core-ml-recommender-engine-for-ios-using-create-ml-e8a748d01ba3) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLRecommender)
 * [CoreML NSFW Classifier Using CreateML](https://medium.com/better-programming/nsfw-image-detector-using-create-ml-core-ml-and-vision-79792d805bab?source=friends_link&sk=6b1007eab8dce2aa5079953409b9e63d) | [Code](https://github.com/anupamchugh/iowncode/tree/master/NSFWCreateMLImageClassifier)
 * [SwiftUI CoreML Emoji Hunter Game](https://heartbeat.fritz.ai/build-a-swiftui-core-ml-emoji-hunt-game-for-ios-eb4465ec4153) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIVisionEmojiHunt)
+* * [CoreML Background Removal](https://betterprogramming.pub/coreml-image-segmentation-background-remove-ca11e6f6a083) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLBackgroundChangeSwiftUI)
 
 ## Vision Framework
 * [Built-in Animal Classifier](https://medium.com/swlh/ios-vision-cat-vs-dog-image-classifier-in-5-minutes-f9fd6f264762?source=friends_link&sk=2d03ffb703aa0d15415f4690e8d81c3f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionPetAnimalClassifier)
