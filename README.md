@@ -59,10 +59,6 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 
 Let's connect on [Twitter](https://twitter.com/chughanupam)!
 
-If these projects helped you save development time, you can support my work on [Patreon](https://www.patreon.com/anupamchugh) or buy me a cup of coffee:
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/anupamchugh)
-
 </a>
 
 
