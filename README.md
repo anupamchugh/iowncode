@@ -33,16 +33,16 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 * [Built-in Animal Classifier](https://medium.com/swlh/ios-vision-cat-vs-dog-image-classifier-in-5-minutes-f9fd6f264762?source=friends_link&sk=2d03ffb703aa0d15415f4690e8d81c3f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionPetAnimalClassifier)
 * [Built-in Text Recognition](https://medium.com/better-programming/ios-vision-text-document-scanner-effc0b7f4635) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionTextRecogniser)
 * [Image Similarity](https://betterprogramming.pub/compute-image-similarity-using-computer-vision-in-ios-75b4dcdd095f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSImageSimilarityUsingVision)
-* [Scanning Credit Card Using Rectangle Detection and Text Recognition](https://heartbeat.fritz.ai/scanning-credit-cards-with-computer-vision-on-ios-c3f4d8912de4) | [Code](https://github.com/anupamchugh/iowncode/tree/master/VisionCreditScan)
+* [Scanning Credit Card Using Rectangle Detection and Text Recognition](https://betterprogramming.pub/scanning-credit-cards-with-computer-vision-on-ios-c3f4d8912de4) | [Code](https://github.com/anupamchugh/iowncode/tree/master/VisionCreditScan)
 * [Cropping Using Saliency](https://medium.com/better-programming/cropping-areas-of-interest-using-vision-in-ios-e83b5e53440b?source=friends_link&sk=e14d1979ec429468e5a5f63ec44c5a75) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionCroppingSalientFeatures)
 * [Find Best Face Captured In A Live Photo](https://heartbeat.fritz.ai/computer-vision-in-ios-determine-the-best-facial-expression-in-live-photos-452a2eaf6512) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionFaceQualityLivePhoto)
 
 * [Vision Contour Detection](https://heartbeat.fritz.ai/new-in-ios-14-vision-contour-detection-68fd5849816e) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/iOS14VisionContourDetection)
-* [Vision Hand Pose Estimation](https://heartbeat.fritz.ai/swipeless-tinder-using-ios-14-vision-hand-pose-estimation-64e5f00ce45c) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/iOS14VisionHandPoseSwipe)
+* [Vision Hand Pose Estimation](https://betterprogramming.pub/swipeless-tinder-using-ios-14-vision-hand-pose-estimation-64e5f00ce45c) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/iOS14VisionHandPoseSwipe)
 
 ## Natural Language Framework
 * [Classify Movie Reviews Using Sentiment Analysis and also CoreML](https://towardsdatascience.com/classifying-movie-reviews-with-natural-language-framework-12dfe2fc3308) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSNLPRottenTomatoes)
-* [Sentiment Analysis Of Hacker News Feed Using SwiftUI](https://heartbeat.fritz.ai/sentiment-analysis-on-ios-using-swift-natural-language-and-combine-hacker-news-top-stories-d1b8d8f4f798) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIHNSentiments)
+* [Sentiment Analysis Of Hacker News Feed Using SwiftUI](https://betterprogramming.pub/sentiment-analysis-on-ios-using-swift-natural-language-and-combine-hacker-news-top-stories-d1b8d8f4f798) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIHNSentiments)
 
 ## RealityKit
 * [Introduction To Entities, Gestures and Raycasting](https://heartbeat.fritz.ai/introduction-to-realitykit-on-ios-entities-gestures-and-ray-casting-8f6633c11877) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitEntitiesVision)
