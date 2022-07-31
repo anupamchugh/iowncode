@@ -13,26 +13,26 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 * [SwiftUI Contact Search](https://medium.com/better-programming/build-a-swiftui-contacts-search-application-d41b414fe046?source=friends_link&sk=38c67b34ada448c52827f5be1f70ada8) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIContactSearch)
 * [SwiftUI Pull To Refresh Workaround](https://medium.com/better-programming/pull-to-refresh-in-swiftui-6604f54a01d5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIPullToRefresh)
 * [SwiftUI Alamofire](https://medium.com/better-programming/combine-swiftui-with-alamofire-abb4cd4a0aca?source=friends_link&sk=46215390a2df56654ae240d06755a905) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIAlamofire)
-* [SwiftUI COVID-19 Maps Visualisation](https://heartbeat.fritz.ai/coronavirus-visualisation-on-maps-with-swiftui-and-combine-on-ios-c3f6e04c2634) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUICoronaMapTracker)
+* [SwiftUI COVID-19 Maps Visualisation](https://heartbeat.comet.ml/coronavirus-visualisation-on-maps-with-swiftui-and-combine-on-ios-c3f6e04c2634) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUICoronaMapTracker)
 * [SwiftUI Combine URLSession Infinite Scrolling](https://medium.com/better-programming/build-an-endless-scrolling-list-with-swiftui-combine-and-urlsession-8a697a8318cb?source=friends_link&sk=d0ed3a0e29bc59b9faf0176e000dbe68) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUICombineURLSession)
 
 
 ## CoreML and CreateML
 * CoreML 3 On Device Training [Part 1: Build Updatable Model](https://medium.com/better-programming/how-to-create-updatable-models-using-core-ml-3-cc7decd517d5?source=friends_link&sk=b34c2f90ec24f355dcad7e0c075e2f5e) | [Part 2: Re-train On Device](https://medium.com/better-programming/how-to-train-a-core-ml-model-on-your-device-cccd0bee19d?source=friends_link&sk=efa2297be5c42ca26c0971f4888f73d1) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSCoreMLOnDeviceTraining)
 * [PencilKit Run Core ML Model MNIST](https://medium.com/better-programming/pencilkit-meets-core-ml-aefe3cde6a96?source=friends_link&sk=f3cf758575adb9c6391af3bd18fd65a6) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSPencilKitCoreMLMNIST)
-* [Sound Classifier Using CoreML and CreateML](https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreML3SoundClassifier)
-* [CoreML CreateML Recommender System](https://heartbeat.fritz.ai/build-a-core-ml-recommender-engine-for-ios-using-create-ml-e8a748d01ba3) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLRecommender)
+* [Sound Classifier Using CoreML and CreateML](https://betterprogramming.pub/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreML3SoundClassifier)
+* [CoreML CreateML Recommender System](https://betterprogramming.pub/build-a-core-ml-recommender-engine-for-ios-using-create-ml-e8a748d01ba3) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLRecommender)
 * [CoreML NSFW Classifier Using CreateML](https://medium.com/better-programming/nsfw-image-detector-using-create-ml-core-ml-and-vision-79792d805bab?source=friends_link&sk=6b1007eab8dce2aa5079953409b9e63d) | [Code](https://github.com/anupamchugh/iowncode/tree/master/NSFWCreateMLImageClassifier)
-* [SwiftUI CoreML Emoji Hunter Game](https://heartbeat.fritz.ai/build-a-swiftui-core-ml-emoji-hunt-game-for-ios-eb4465ec4153) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIVisionEmojiHunt)
+* [SwiftUI CoreML Emoji Hunter Game](https://betterprogramming.pub/build-a-swiftui-core-ml-emoji-hunt-game-for-ios-eb4465ec4153) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIVisionEmojiHunt)
 * * [CoreML Background Removal](https://betterprogramming.pub/coreml-image-segmentation-background-remove-ca11e6f6a083) | [Code](https://github.com/anupamchugh/iowncode/tree/master/CoreMLBackgroundChangeSwiftUI)
 
-* [Real-time Style Transfer On A Live Camera Feed](https://heartbeat.fritz.ai/train-and-run-a-create-ml-style-transfer-model-in-an-ios-camera-application-84aab3b85458) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/CreateMLVideoStyleTransfer)
+* [Real-time Style Transfer On A Live Camera Feed](https://betterprogramming.pub/train-and-run-a-create-ml-style-transfer-model-in-an-ios-camera-application-84aab3b85458) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/CreateMLVideoStyleTransfer)
 
 
 ## Vision Framework
 * [Built-in Animal Classifier](https://medium.com/swlh/ios-vision-cat-vs-dog-image-classifier-in-5-minutes-f9fd6f264762?source=friends_link&sk=2d03ffb703aa0d15415f4690e8d81c3f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionPetAnimalClassifier)
 * [Built-in Text Recognition](https://medium.com/better-programming/ios-vision-text-document-scanner-effc0b7f4635) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOS13VisionTextRecogniser)
-* [Image Similarity](https://heartbeat.fritz.ai/compute-image-similarity-using-computer-vision-in-ios-75b4dcdd095f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSImageSimilarityUsingVision)
+* [Image Similarity](https://betterprogramming.pub/compute-image-similarity-using-computer-vision-in-ios-75b4dcdd095f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSImageSimilarityUsingVision)
 * [Scanning Credit Card Using Rectangle Detection and Text Recognition](https://heartbeat.fritz.ai/scanning-credit-cards-with-computer-vision-on-ios-c3f4d8912de4) | [Code](https://github.com/anupamchugh/iowncode/tree/master/VisionCreditScan)
 * [Cropping Using Saliency](https://medium.com/better-programming/cropping-areas-of-interest-using-vision-in-ios-e83b5e53440b?source=friends_link&sk=e14d1979ec429468e5a5f63ec44c5a75) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionCroppingSalientFeatures)
 * [Find Best Face Captured In A Live Photo](https://heartbeat.fritz.ai/computer-vision-in-ios-determine-the-best-facial-expression-in-live-photos-452a2eaf6512) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionFaceQualityLivePhoto)
