@@ -35,9 +35,9 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 * [Image Similarity](https://betterprogramming.pub/compute-image-similarity-using-computer-vision-in-ios-75b4dcdd095f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSImageSimilarityUsingVision)
 * [Scanning Credit Card Using Rectangle Detection and Text Recognition](https://betterprogramming.pub/scanning-credit-cards-with-computer-vision-on-ios-c3f4d8912de4) | [Code](https://github.com/anupamchugh/iowncode/tree/master/VisionCreditScan)
 * [Cropping Using Saliency](https://medium.com/better-programming/cropping-areas-of-interest-using-vision-in-ios-e83b5e53440b?source=friends_link&sk=e14d1979ec429468e5a5f63ec44c5a75) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionCroppingSalientFeatures)
-* [Find Best Face Captured In A Live Photo](https://heartbeat.fritz.ai/computer-vision-in-ios-determine-the-best-facial-expression-in-live-photos-452a2eaf6512) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionFaceQualityLivePhoto)
+* [Find Best Face Captured In A Live Photo](https://betterprogramming.pub/computer-vision-in-ios-determine-the-best-facial-expression-in-live-photos-452a2eaf6512) | [Code](https://github.com/anupamchugh/iowncode/tree/master/iOSVisionFaceQualityLivePhoto)
 
-* [Vision Contour Detection](https://heartbeat.fritz.ai/new-in-ios-14-vision-contour-detection-68fd5849816e) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/iOS14VisionContourDetection)
+* [Vision Contour Detection](https://betterprogramming.pub/new-in-ios-14-vision-contour-detection-68fd5849816e) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/iOS14VisionContourDetection)
 * [Vision Hand Pose Estimation](https://betterprogramming.pub/swipeless-tinder-using-ios-14-vision-hand-pose-estimation-64e5f00ce45c) | [Code](https://github.com/anupamchugh/iOS14-Resources/tree/master/iOS14VisionHandPoseSwipe)
 
 ## Natural Language Framework
@@ -45,8 +45,8 @@ The below resources largely pertain to iOS 13. For iOS 14 and above, do check ou
 * [Sentiment Analysis Of Hacker News Feed Using SwiftUI](https://betterprogramming.pub/sentiment-analysis-on-ios-using-swift-natural-language-and-combine-hacker-news-top-stories-d1b8d8f4f798) | [Code](https://github.com/anupamchugh/iowncode/tree/master/SwiftUIHNSentiments)
 
 ## RealityKit
-* [Introduction To Entities, Gestures and Raycasting](https://heartbeat.fritz.ai/introduction-to-realitykit-on-ios-entities-gestures-and-ray-casting-8f6633c11877) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitEntitiesVision)
-* [Collisions](https://heartbeat.fritz.ai/realitykit-on-ios-part-2-applying-collision-events-d64b6e10421f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitCollisions)
+* [Introduction To Entities, Gestures and Raycasting](https://betterprogramming.pub/introduction-to-realitykit-on-ios-entities-gestures-and-ray-casting-8f6633c11877) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitEntitiesVision)
+* [Collisions](https://betterprogramming.pub/realitykit-on-ios-part-2-applying-collision-events-d64b6e10421f) | [Code](https://github.com/anupamchugh/iowncode/tree/master/RealityKitCollisions)
 
 
 ## UIKit and other changes in iOS 13
